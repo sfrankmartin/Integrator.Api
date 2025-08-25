@@ -1,5 +1,8 @@
 namespace Integrator.Api.Models.News;
 
+/// <summary>
+/// Simplified news item returned by our API
+/// </summary>
 public sealed class NewsItemDto
 {
   public required string Title { get; init; }

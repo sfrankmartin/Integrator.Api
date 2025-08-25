@@ -3,6 +3,9 @@ using Integrator.Api.Models.Weather;
 
 namespace Integrator.Api.Models.Dashboard;
 
+/// <summary>
+/// Aggregated data from News and Weather endpoints 
+/// </summary>
 public sealed class DashboardDto
 {
   public WeatherSummaryDto? Weather { get; init; }
