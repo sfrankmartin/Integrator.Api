@@ -19,6 +19,12 @@ public sealed class DashboardController : ControllerBase
     _logger = logger;
   }
 
+  /// <summary>
+  /// Aggregates weather and news into a simple dashboard response
+  /// </summary>
+  /// <param name="city">City for weather, e.g. Melbourne</param>
+  /// <param name="newsQuery">Optional news query. If omitted, returns front page stories</param>
+  /// <param name="cancellationToken">Cancellation token</param>
   [HttpGet]
   [ProducesResponseType(typeof(DashboardDto), StatusCodes.Status200OK)]
   [ProducesResponseType(StatusCodes.Status502BadGateway)]

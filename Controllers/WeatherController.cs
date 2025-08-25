@@ -17,6 +17,11 @@ public sealed class WeatherController : ControllerBase
     _logger = logger;
   }
 
+  /// <summary>
+  /// Gets current weather for a city using OpenMeteo APIs
+  /// </summary>
+  /// <param name="city">City name e.g. Melbourne</param>
+  /// <param name="cancellationToken">Cancellation token</param>
   [HttpGet]
   [ProducesResponseType(typeof(WeatherSummaryDto), StatusCodes.Status200OK)]
   [ProducesResponseType(StatusCodes.Status404NotFound)]

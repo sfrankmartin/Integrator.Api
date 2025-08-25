@@ -16,6 +16,11 @@ public sealed class NewsController : ControllerBase
     _logger = logger;
   }
 
+  /// <summary>
+  /// Gets latest HackerNews front page story, or query results
+  /// </summary>
+  /// <param name="query">Optional search query</param>
+  /// <param name="cancellationToken">Cancellation token</param>
   [HttpGet]
   [ProducesResponseType(typeof(IReadOnlyList<NewsItemDto>), StatusCodes.Status200OK)]
   [ProducesResponseType(StatusCodes.Status502BadGateway)]
